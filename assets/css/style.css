@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*:root {
+    /***********  VARIABLE COLORS ***********/
+
+    /* ##### Primary ##### */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* ##### Neutral ##### */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* ##### TYPOGRAPHY ##### */
+
+    --font-principal: 'Red Hat Display', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    font-family: var(--font-principal);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgcard {
+    position: absolute;
+    opacity: 0.4;
+}
+
+@media screen and (min-width:1440px) {
+    .imgcard {
+        display: block;
+    }
+
+}
+
+.card {
+    background: red;
+    width: 45rem;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img--hero {
+    background: blue;
+    width: 100%;
+    height: 20rem;
+    margin: 0;
+    padding: 0;
+}
+
+.card__title {
+    background: orange;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card__paragraph {}
+
+.card__audioplan {}
+
+.card__audioplan--title {}
+
+.card__audioplan--change {}
+
+.card__button--payment {}
+
+.card__button--order {}
