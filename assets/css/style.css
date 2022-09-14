@@ -1,83 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 *:root {
-    /***********  VARIABLE COLORS ***********/
+  /***********  VARIABLE COLORS ***********/
 
-    /* ##### Primary ##### */
-    --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: hsl(245, 75%, 52%);
+  /* ##### Primary ##### */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
 
-    /* ##### Neutral ##### */
-    --very-pale-blue: hsl(225, 100%, 98%);
-    --desaturated-blue: hsl(224, 23%, 55%);
-    --dark-blue: hsl(223, 47%, 23%);
+  /* ##### Neutral ##### */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 
-    /* ##### TYPOGRAPHY ##### */
+  /* ##### TYPOGRAPHY ##### */
 
-    --font-principal: 'Red Hat Display', sans-serif;
-
+  --font-principal: "Red Hat Display", sans-serif;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-
-    font-family: var(--font-principal);
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+  font-family: var(--font-principal);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgcard {
-    position: absolute;
-    opacity: 0.4;
+  position: absolute;
+  opacity: 0.4;
 }
 
-@media screen and (min-width:1440px) {
-    .imgcard {
-        display: block;
-    }
-
+@media screen and (min-width: 1440px) {
+  .imgcard {
+    display: block;
+  }
 }
 
 .card {
-    background: red;
-    width: 45rem;
-    margin: 0;
-    padding: 0;
+  /* background: red; */
+  width: 45rem;
+  margin: 0;
+  padding: 0;
 
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__img--hero {
-    background: blue;
-    width: 100%;
-    height: 20rem;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 2rem 2rem 0 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__title {
-    background: orange;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-principal);
+  font-size: 2.8rem;
+  font-weight: 700;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.card__paragraph {}
+.card__paragraph {
+  width: 100%;
+  margin: 5rem 0;
+  padding: 0 8rem;
 
-.card__audioplan {}
+  font-family: var(--font-principal);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.5rem;
 
-.card__audioplan--title {}
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.card__audioplan--change {}
+.card__audioplan {
+  background: blue;
+  width: 100%;
+  margin: 0;
+  padding: 0 7rem;
 
-.card__button--payment {}
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card__audioplan--iconmusic {
+  background: red;
+  width: 4.5rem;
+  margin: 0;
+  padding: 0;
+}
 
-.card__button--order {}
+.audioplan__text {
+  background: brown;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.audioplan__text--title {
+  background: red;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-principal);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.audioplan__text--paragraph {
+}
+
+.card__audioplan--change {
+  background: red;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-principal);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.card__button--payment {
+}
+
+.card__button--order {
+}
