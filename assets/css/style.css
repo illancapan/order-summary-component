@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
-*:root {
+:root {
   /***********  VARIABLE COLORS ***********/
 
   /* ##### Primary ##### */
@@ -23,29 +23,32 @@ html {
 
 body {
   font-family: var(--font-principal);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-
   background-image: url("../images/pattern-background-desktop.svg");
   background-repeat: repeat-x;
-  background-size: 100vw;
   background-color: var(--pale-blue);
-
 }
 
 .card {
-  /* background: red; */
-  width: 31vw;
+  background: #ffffff;
+  width: 31rem;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: auto;
 
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  border-radius: 2rem;
 }
 
 .card__img--hero {
@@ -60,6 +63,16 @@ body {
   align-items: center;
 }
 
+.section__card {
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card__title {
   width: 100%;
   margin: 0;
@@ -67,7 +80,7 @@ body {
 
   font-family: var(--font-principal);
   color: var(--dark-blue);
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 900;
 
   display: flex;
@@ -79,7 +92,7 @@ body {
 .card__paragraph {
   width: 100%;
   margin: 3rem 0;
-  padding: 0 8.5rem;
+  padding: 0 2rem;
 
   font-family: var(--font-principal);
   color: var(--desaturated-blue);
@@ -90,32 +103,47 @@ body {
 }
 
 .card__audioplan {
-  /* background: blue; */
-  width: 100%;
-  margin: 0;
-  padding: 0 7rem;
-
+  background: var(--very-pale-blue);
+  width: 85%;
+  margin: 0 2rem;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .card__audioplan--iconmusic {
-  /* background: red; */
   width: 4.5rem;
   margin: 0;
   padding: 0;
 }
 
+.audioplan__title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-principal);
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
 .audioplan__text {
-  /* background: brown; */
   width: 100%;
   margin: 0;
   padding: 0;
+
+  font-family: var(--font-principal);
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5rem;
 }
 
-.audioplan__text--title {
+.audioplan__change {
   /* background: red; */
   width: 100%;
   margin: 0;
@@ -123,26 +151,16 @@ body {
 
   font-family: var(--font-principal);
   font-size: 1.8rem;
+  color: black; /*+++++++++++++++*/
   font-weight: 700;
   text-align: center;
   line-height: 2.5rem;
 }
 
-.audioplan__text--paragraph {}
-
-.card__audioplan--change {
-  /* background: red; */
-  width: 100%;
-  margin: 0;
-  padding: 0;
-
-  font-family: var(--font-principal);
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 2.5rem;
+.card__button--payment {
+  background-color: black;
 }
 
-.card__button--payment {}
-
-.card__button--order {}
+.card__button--order {
+  background-color: blue;
+}
