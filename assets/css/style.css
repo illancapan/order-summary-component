@@ -11,6 +11,7 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --card-color: hsl(0, 0%, 100%);
 
   /* ##### TYPOGRAPHY ##### */
 
@@ -38,7 +39,7 @@ body {
 }
 
 .card {
-  background: #ffffff;
+  background: var(--card-color);
   width: 31rem;
   margin: 0;
   padding: 0;
@@ -56,17 +57,11 @@ body {
   margin: 0;
   padding: 0;
   border-radius: 2rem 2rem 0 0;
-
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .section__card {
   width: 100%;
   margin: 0;
-
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -76,11 +71,11 @@ body {
 .card__title {
   width: 100%;
   margin: 0;
-  padding: 5rem 0 0 0;
+  padding: 3rem 0 0 0;
 
   font-family: var(--font-principal);
   color: var(--dark-blue);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
 
   display: flex;
@@ -90,77 +85,195 @@ body {
 }
 
 .card__paragraph {
-  width: 100%;
-  margin: 3rem 0;
-  padding: 0 2rem;
+  width: 80%;
+  margin: 2rem 0;
+  padding: 0 1.3rem;
 
   font-family: var(--font-principal);
   color: var(--desaturated-blue);
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 300;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 .card__audioplan {
   background: var(--very-pale-blue);
-  width: 85%;
+  width: 80%;
   margin: 0 2rem;
   padding: 2rem 2rem;
   border-radius: 1rem;
   display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audioplan {
+  margin: 0 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  align-items: center;
 }
 
 .card__audioplan--iconmusic {
-  width: 4.5rem;
-  margin: 0;
-  padding: 0;
+  width: 10rem;
 }
 
 .audioplan__title {
   width: 100%;
-  margin: 0;
-  padding: 0;
-
   font-family: var(--font-principal);
-  color: black;
-  font-size: 1.8rem;
-  font-weight: 700;
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  font-weight: 900;
   text-align: center;
-  line-height: 2.5rem;
 }
 
 .audioplan__text {
   width: 100%;
-  margin: 0;
-  padding: 0;
-
   font-family: var(--font-principal);
-  color: black;
-  font-size: 1.8rem;
+  color: var(--desaturated-blue);
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
   line-height: 2.5rem;
 }
 
 .audioplan__change {
-  /* background: red; */
   width: 100%;
-  margin: 0;
-  padding: 0;
-
   font-family: var(--font-principal);
-  font-size: 1.8rem;
-  color: black; /*+++++++++++++++*/
-  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(228, 45%, 44%);
+  font-weight: 900;
+  text-decoration: underline;
   text-align: center;
   line-height: 2.5rem;
+  cursor: pointer;
+}
+
+.audioplan__change:hover {
+  text-decoration: none;
+  opacity: 0.6;
 }
 
 .card__button--payment {
-  background-color: black;
+  background-color: var(--bright-blue);
+  width: 80%;
+  margin: 2rem 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--font-principal);
+  font-weight: 900;
+  border-radius: 1rem;
+  cursor: pointer;
+  -box-shadow: -1px 17px 11px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -1px 17px 11px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 17px 11px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card__button--payment:hover {
+  opacity: 0.6;
 }
 
 .card__button--order {
-  background-color: blue;
+  width: 80%;
+  margin: 0 0 2rem;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: var(--font-principal);
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.card__button--order:hover {
+  font-family: var(--font-principal);
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: repeat-x;
+    background-color: var(--pale-blue);
+  }
+  .card__title {
+    font-size: 2.2rem;
+    font-weight: 900;
+  }
+
+  .card__paragraph {
+    width: 95%;
+    margin: 2rem 0;
+    padding: 0 1.3rem;
+
+    font-family: var(--font-principal);
+    color: var(--desaturated-blue);
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  .card__audioplan {
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 2rem;
+  }
+
+  .card__audioplan--iconmusic {
+    width: 60%;
+  }
+
+  .audioplan__title {
+    width: 10rem;
+    font-family: var(--font-principal);
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+
+  .audioplan__text {
+    width: 10rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .audioplan__change {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .card__button--payment {
+    width: 90%;
+    font-size: 1.4rem;
+    padding: 2rem 0;
+  }
+
+  .card__button--order {
+    width: 90%;
+    font-size: 1.6rem;
+  }
+}
+
+/* ========== FOOTER ==========*/
+
+.attribution {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
